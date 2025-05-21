@@ -7,6 +7,7 @@ export const createNotification = async (req, res) => {
     await notification.save();
     res.status(201).json({ message: 'Notification created', notification });
   } catch (err) {
+    console.log(err)
     res.status(500).json({ error: 'Server error' });
   }
 };

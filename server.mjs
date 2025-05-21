@@ -7,6 +7,9 @@ import reservationRoutes from './routes/reservationRoutes.mjs'
 import billingRoutes from './routes/billingRoutes.mjs'
 import housekeepingRoutes from './routes/housekeepingRoutes.mjs'
 import maintenanceRoutes from './routes/maintenanceRoutes.mjs'
+import reportRoutes from './routes/reportRoutes.mjs'
+import feedbackRoutes from './routes/feedbackRoutes.mjs'
+import notificationRoutes from './routes/notificationRoutes.mjs'
 
 const app = express();
 app.use(express.json());
@@ -23,6 +26,9 @@ app.use('/api/reservations', reservationRoutes);
 app.use('/api/billing',billingRoutes);
 app.use('/api/housekeeping', housekeepingRoutes);
 app.use('/api/maintenance', maintenanceRoutes);
+app.use('/api/report',reportRoutes)
+app.use('/api/feedback',feedbackRoutes)
+app.use('/api/notification',notificationRoutes)
 
 
 const PORT = process.env.PORT || 5000;
